@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | BlueStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" style="padding:50px; text-align:center;">
+    <h1 style="color:#3befff;">Contact Us</h1>
+    <p>We’d love to hear from you! Please fill out the form below.</p>
+
+    <form onsubmit="return handleContact(event)" style="max-width:500px; margin:auto;">
+      <input type="text" placeholder="Your Name" required style="width:100%; margin:10px 0; padding:10px;">
+      <input type="email" placeholder="Your Email" required style="width:100%; margin:10px 0; padding:10px;">
+      <textarea placeholder="Your Message" required style="width:100%; margin:10px 0; padding:10px;"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div style="margin-top:40px;">
+      <h3>📞 Contact Info</h3>
+      <p>Email: support@bluestore.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123 Market Street, Bengaluru, India</p>
+    </div>
+
+    <a href="index.html" class="btn" style="margin-top:30px;">← Back to Home</a>
+  </div>
+
+  <script>
+    function handleContact(event) {
+      event.preventDefault();
+      alert("Message sent successfully!");
+    }
+  </script>
+</body>
+</html>

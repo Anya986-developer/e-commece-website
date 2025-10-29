@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Bluestore</title>
+</head>
+<body>
+    <body style="background: radial-gradient(#fff,#d6fff8); font-family: 'Poppins', sans-serif;">
+    <div class="register-page" style="display:flex; justify-content:center; align-items:center; height:100vh;">
+        <div style="background:#fff; padding:40px; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.2); width:350px; text-align:center;">
+            <h2 style="color:#3befff;">Create Your Account</h2>
+            <form onsubmit="return handleRegister(event)">
+                <input type="text" placeholder="Full Name" required style="width:100%; margin:10px 0; padding:10px;">
+                <input type="email" placeholder="Email" required style="width:100%; margin:10px 0; padding:10px;">
+                <input type="password" placeholder="Password" required style="width:100%; margin:10px 0; padding:10px;">
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p style="margin-top:15px;">Already have an account? <a href="index.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+    function handleRegister(event) {
+        event.preventDefault();
+        alert("Registration successful (demo only)");
+        window.location.href = "index.html";
+    }
+    </script>
+</body>
+</body>
+</html>

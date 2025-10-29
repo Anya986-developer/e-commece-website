@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BlueStore Payment Gateway</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #00b4db, #0083b0);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .payment-container {
+      background: #fff;
+      color: #333;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      width: 380px;
+      text-align: center;
+      position: relative;
+    }
+    h2 {
+      color: #0083b0;
+      margin-bottom: 10px;
+    }
+    .product-info {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .amount {
+      font-weight: bold;
+      color: #00b4db;
+      font-size: 20px;
+    }
+    .payment-icons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+    .payment-icons img {
+      width: 45px;
+      height: auto;
+      filter: grayscale(20%);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      margin: 8px 0;
+    }
+    .btn {
+      background: #00b4db;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .btn:hover {
+      background: #0083b0;
+    }
+    .cancel-btn {
+      background: #ccc;
+      color: #333;
+    }
+    .cancel-btn:hover {
+      background: #aaa;
+    }
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #00b4db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .success-message {
+      display: none;
+      font-size: 18px;
+      color: #00b4db;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-container">
+    <h2>💳 BlueStore Secure Payment</h2>
+
+    <div class="product-info">
+      <p><b>Product:</b> <span id="productName"></span></p>
+      <p><b>Amount:</b> $<span class="amount" id="amount"></span></p>
+    </div>
+
+    <div class="payment-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968299.png" alt="Visa">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" alt="MasterCard">
+      <img src="https://cdn-icons-png.flaticon.com/512/196/196565.png" alt="UPI">
+      <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Wallet">
+    </div>
+
+    <form onsubmit="processPayment(event)">
+      <input type="text" id="cardNumber" placeholder="Card Number" required maxlength="16" />
+      <input type="text" id="cardName" placeholder="Cardholder Name" required />
+      <input type="text" id="expiry" placeholder="Expiry (MM/YY)" required maxlength="5" />
+      <input type="text" id="cvv" placeholder="CVV" required maxlength="3" />
+
+      <button type="submit" class="btn">Pay Now</button>
+      <button type="button" class="btn cancel-btn" onclick="cancelPayment()">Cancel</button>
+    </form>
+
+    <div class="loader" id="loader"></div>
+    <div class="success-message" id="successMessage">✅ Payment Successful! Redirecting...</div>
+  </div>
+
+  <script>
+    // Load product details
+    document.getElementById("productName").textContent = localStorage.getItem("productName");
+    document.getElementById("amount").textContent = localStorage.getItem("amount");
+
+    function processPayment(event) {
+      event.preventDefault();
+      document.getElementById("loader").style.display = "block";
+
+      // Fake loading time
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+        localStorage.removeItem("productName");
+        localStorage.removeItem("amount");
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 2000);
+      }, 2000);
+    }
+
+    function cancelPayment() {
+      alert("❌ Payment Cancelled. Returning to store.");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

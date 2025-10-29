@@ -1,0 +1,598 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+.col-2 img{
+    max-width: 100%;
+    height: 500px;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: rgb(69, 226, 243);
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+.btn:hover{
+    background: #f49898;
+}
+.header{
+    background: radial-gradient(#fff,#d6fff8);
+}
+.header .row{
+    margin-top: 180px;
+}
+.categories{
+    margin: 70px;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+     width: 100%;
+}
+.small-container{
+    max-width: 1180px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.3s;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: '';
+    background: #3befff;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.rating .fa{
+    color: #3b83ff;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+.offer{
+    background: radial-gradient(#fff,#d6fff8);
+    margin-top: 80px;
+    padding: 30px 0;
+
+}
+.col-2 .offer-img{
+    padding: 50px;
+
+}
+small{
+    color:#555;
+}
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #3bebff;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+.footer{
+    background: #000;
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250ppx;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 40%;
+    text-align: center;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+}
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background: #545454;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+}
+.buy-btn {
+    background: #3e93c4;
+    border: none;
+    cursor: pointer;
+}
+.buy-btn:hover {
+    background: #27fffb;
+}
+/* ===== Footer Login/Register Buttons ===== */
+.footer-auth-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-auth-buttons .btn {
+    margin: 10px;
+    background: #3befff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.footer-auth-buttons .btn:hover {
+    background: #27fffb;
+}
+
+/* ===== Login Modal ===== */
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.login-modal-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-modal-content input {
+    width: 90%;
+    margin: 8px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+/* Dropdown content box */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #333;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease;
+}
+
+/* Hover styles */
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Add arrow hover color */
+.dropdown:hover .dropbtn {
+    color: #007BFF;
+}
+/* ============================
+   Enhanced Product Hover Effects
+   ============================ */
+
+/* Add a soft shadow and smooth transitions */
+.col-4 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Image zoom + slight rotate on hover */
+.col-4 img {
+    transition: transform 0.5s ease, filter 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Glow and lift effect */
+.col-4:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image zoom and brightness on hover */
+.col-4:hover img {
+    transform: scale(1.1) rotate(1deg);
+    filter: brightness(1.1);
+}
+
+/* Title and price animation */
+.col-4 h4, .col-4 p {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.col-4:hover h4 {
+    color: #007BFF;
+    transform: translateY(-3px);
+}
+
+.col-4:hover p {
+    color: #000;
+}
+
+/* Floating Add to Cart / Buy Button (if exists) */
+.col-4 .btn, .col-4 .buy-btn {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Show button smoothly on hover */
+.col-4:hover .btn,
+.col-4:hover .buy-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Subtle glow effect around card */
+.col-4::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(0,123,255,0.15), rgba(0,255,255,0.15));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+/* Show glowing overlay */
+.col-4:hover::before {
+    opacity: 1;
+}
+
+/* Entry animation for smooth loading */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.col-4 {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.col-4:nth-child(1) { animation-delay: 0.1s; }
+.col-4:nth-child(2) { animation-delay: 0.2s; }
+.col-4:nth-child(3) { animation-delay: 0.3s; }
+.col-4:nth-child(4) { animation-delay: 0.4s; }
+/* ============================
+   QUICK VIEW POPUP STYLING
+   ============================ */
+
+.quick-view-btn {
+    background: #3befff;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Button appears only when product hovered */
+.col-4:hover .quick-view-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover glow */
+.quick-view-btn:hover {
+    background: #00bfff;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0,191,255,0.6);
+}
+
+/* Quick View Modal */
+.quick-view-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-view-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+.quick-view-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.close-quick-view {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+}
+
+.close-quick-view:hover {
+  color: #000;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

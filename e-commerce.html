@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akanksha's website | E-commerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+            <div class="logo">
+                <img src="blue123.png" width="125px">
+            </div>
+            <nav>
+                <nav>
+    <ul id="MenuItems">
+        <li><a href="#Home">Home</a></li>
+
+        <!-- Dropdown for Products -->
+        <li class="dropdown">
+            <a href="#products" class="dropbtn">Products ▼</a>
+            <div class="dropdown-content">
+                <a href="#men">Men</a>
+                <a href="#women">Women</a>
+                <a href="#accessories">Accessories</a>
+            </div>
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <!-- Dropdown for Account -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Account ▼</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="openLogin()">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </li>
+
+        <li><a href="cart.html">Cart 🛒</a></li>
+    </ul>
+</nav>
+
+            </nav>
+            <a href="cart.html"></a>
+            <img src="cart.png" width="30px" height="30px" alt="Cart" class="cart-icon">
+            <img src="menu123.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="row" id="#Home">
+                <div class="col-2">
+                    <h1>Give Your Fashion<br> A New Blue look!</h1>
+                    <p>Succes isn't always about greatness. it's about cosistency.<br>
+                        Consistent hard work gains success. Greatness will come.
+                    </p>
+                    <a href="" class="btn">Explore Now &#10132</a>
+                </div>
+                <div class="col-2">
+                    <img src="blue_rani13.png">
+                    <img src="blue_king1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------featured categries------------->
+    <div class="categories" >
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="category1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="category21.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="categoty33.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------featured products----------->
+    <div class="small-container" id="products">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="product-1.webp">
+                <h4>Blue Printed Shirt</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$69.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Blue T-Shirt', 69)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Blue printed Shirt', 69, '/Users/offic/OneDrive/Desktop/practical exam assignment/product-1.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product-1.webp', 'Blue printed Shirt', '$69.00')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product-2.webp">
+                <h4>Blue sneakers</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$129.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Blue sneakers', 129)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Blue Sneakers', 129, '/Users/offic/OneDrive/Desktop/practical exam assignment/product-2.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('Users/offic/OneDrive/Desktop/practical exam assignment/product-2.webp', 'Blue Sneakers', '$129')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product3.webp">
+                <h4>Dark Blue Tulle <br>Long Prom Dress</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$259.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Dark Blue Tulle', 259)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Dark Blue Tulle', 259, '/Users/offic/OneDrive/Desktop/practical exam assignment/product3.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product3.webp', 'Dark Blue Tulle', '$259')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product4.webp">
+                <h4>High-Low <br>Evening Dress</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Evening Dress', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('High low evening dress', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product4.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product4.webp', 'High low evening dress', '$359')">👁 Quick View</button>
+            </div>
+        </div>
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="product5.jpg">
+                <h4>Denim Dress</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$69.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Denim Dress', 69)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Denim dress', 69, '/Users/offic/OneDrive/Desktop/practical exam assignment/product5.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product5.jpg', 'Denim dress', '$69')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product6.avif">
+                <h4>Blue lower</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$79.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Blue Lower', 79)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Blue lower', 79, '/Users/offic/OneDrive/Desktop/practical exam assignment/product6.avif')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product6.avif', 'Blue lower', '$79')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product7.webp">
+                <h4>Blue Saree<br>Long Prom Dress</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$99.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Blue Saree', 99)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Blue Saree Long Prom Dress', 99, '/Users/offic/OneDrive/Desktop/practical exam assignment/product7.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product7.webp', 'Blue Saree Long Prom Dress', '$99')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product8.jpg">
+                <h4>Blue Sandal</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$59.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Blue Sandal', 59)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Blue Sandal', 59, '/Users/offic/OneDrive/Desktop/practical exam assignment/product8.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product8.jpg', 'Blue Sandal', '$59')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product9.jpg">
+                <h4>Shoes</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Shoes', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Shoes', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product9.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product9.jpg', 'Stylish Shoes', '$359')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product10.jpg">
+                <h4>Women's shirt</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Women\'s shirt', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Women\'s shirt', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product10.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product10.jpg', 'Women\'s shirt', '$359')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product10.webp">
+                <h4>Denim Jackets<br> For Men</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$59.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Denim Jacket', 59)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Denim Jackets', 59, '/Users/offic/OneDrive/Desktop/practical exam assignment/product10.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product10.webp', 'Denim Jackets', '$59')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product11.webp">
+                <h4>T-Shirts <br> For Men</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$89.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('T-shirt', 89)">Buy Now</button>
+                <button class="btn" onclick="addToCart('T-Shirts', 89, '/Users/offic/OneDrive/Desktop/practical exam assignment/product11.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('Users/offic/OneDrive/Desktop/practical exam assignment/product11.webp', 'T-shirt', '$89')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product13.jpg">
+                <h4>Gowns</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$249.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Gowns', 249)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Gowns', 249, '/Users/offic/OneDrive/Desktop/practical exam assignment/product13.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product13.jpg', 'Gowns', '$249')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product14.jpg">
+                <h4>Navy-Blue</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$159.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Navy-Blue', 159)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Navy-Blue', 159, '/Users/offic/OneDrive/Desktop/practical exam assignment/product14.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product14.jpg', 'navy-blue', '$159')">👁 Quick View</button>
+            </div>
+             <div class="col-4">
+                <img src="product15.webp">
+                <h4>Peacock Designed<br> Gowns</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Peacock Designed', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Peacock Designed Gowns', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product15.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product15.webp', 'Peacock Designed Gowns', '$359')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product16.jpg">
+                <h4>Wedding Dress<br> For Women</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Wedding Dress', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Wedding Dress for women', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product16.jpg')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product16.jpg', 'Stylish Shoes', '$359')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product 17.webp">
+                <h4>Wedding Dress<br> For Women</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$459.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Wedding Dress', 459)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Wedding Dress for women', 459, '/Users/offic/OneDrive/Desktop/practical exam assignment/product 17.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product 17.webp', 'Wedding Dress for women', '$459')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product18.webp">
+                <h4>Wedding Dress<br> For Men</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Wedding Dress', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Wedding Dress for men', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product18.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product18.webp', 'wedding dress for men', '$359')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product19.webp">
+                <h4>Wedding Dress<br> For Men</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$359.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Wedding Dress', 359)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Wedding dress for men', 359, '/Users/offic/OneDrive/Desktop/practical exam assignment/product19.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product19.webp', 'wedding dress for men', '$359')">👁 Quick View</button>
+            </div>
+            <div class="col-4">
+                <img src="product201.webp">
+                <h4>Women accessories</h4>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>$29.00</p>
+                <button class="btn buy-btn" onclick="goToPayment('Women accessories', 29)">Buy Now</button>
+                <button class="btn" onclick="addToCart('Women accessories', 29, '/Users/offic/OneDrive/Desktop/practical exam assignment/product201.webp')">Add to Cart</button>
+                <button class="quick-view-btn" onclick="openQuickView('/Users/offic/OneDrive/Desktop/practical exam assignment/product201.webp', 'women accessories', '$29')">👁 Quick View</button>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!----------offers----------->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="offer1.avif" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exlusively Available on BlueStore</p>
+                    <h1>Royal Blue Choker Set Royal Blue Necklace</h1>
+                    <small>A royal blue necklace's features include a rich, deep blue color,
+                         a central stone or pendant with unique cuts (like princess or marquise), 
+                        and a metal setting that can be silver, gold-plated, or alloy</small>
+                        <a href="" class="btn">Buy Now &#10132</a>
+                        <button class="btn buy-btn" onclick="goToPayment('Royal Blue Choker', 999)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------testimonial------------------------->
+    <div class="testimonial" id="About">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Corrupti iusto aperiam, delectus minus natus magni ex quis, modi nihil officiis,
+                         ducimus accusantium! Accusantium iusto maxime at aut. Culpa, voluptate ullam!</p>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                   </div>
+                   <img src="owner1.jpeg">
+                   <h3>Akanksha kumari</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Corrupti iusto aperiam, delectus minus natus magni ex quis, modi nihil officiis,
+                         ducimus accusantium! Accusantium iusto maxime at aut. Culpa, voluptate ullam!</p>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                   </div>
+                   <img src="owner2.jpeg">
+                   <h3>Aanna parker</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Corrupti iusto aperiam, delectus minus natus magni ex quis, modi nihil officiis,
+                         ducimus accusantium! Accusantium iusto maxime at aut. Culpa, voluptate ullam!</p>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                   </div>
+                   <img src="vecter.jpg">
+                   <h3>vecter weasley</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------brands------------------->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="prada1.png">
+                </div>
+                <div class="col-5">
+                    <img src="nike1.png">
+                </div>
+                <div class="col-5">
+                    <img src="chanel1.png">
+                </div>
+                <div class="col-5">
+                    <img src="dior13.png">
+                </div>
+                <div class="col-5">
+                    <img src="gucci1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------FOOTER--------------------->
+    <div class="footer" id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>DOwnload App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="applogo1.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="blue123.png">
+                    <p>Our Purpose is to satisfy their craves for blue and a quality 
+                        products. To make their fashion more stylish. They can get any
+                        item they want from our BlueStore
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p>Copyright 2025 - Easy Tutorials</p>
+            <!-- ====== Footer Account Buttons ====== -->
+            <div class="footer-auth-buttons">
+                <button class="btn login-btn" onclick="openLogin()">Login</button>
+                <a href="register.html" class="btn register-btn">Register</a>
+            </div>
+
+            <!-- ====== Login Modal (hidden by default) ====== -->
+            <div id="loginModal" class="login-modal">
+                <div class="login-modal-content">
+                    <span class="close-btn" onclick="closeLogin()">&times;</span>
+                    <h2>Login to Your Account</h2>
+                    <form id="loginForm" onsubmit="return handleLogin(event)">
+                        <input type="text" placeholder="Username or Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <!-- Quick View Modal -->
+<div id="quickViewModal" class="quick-view-modal">
+  <div class="quick-view-content">
+    <span class="close-quick-view" onclick="closeQuickView()">&times;</span>
+    <img id="quickViewImg" src="" alt="Product Image">
+    <h2 id="quickViewName"></h2>
+    <p id="quickViewPrice"></p>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  </div>
+    <!--------------------js for toggle menu---------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px"
+        }
+        else{
+            MenuItems.style.maxHeight = "0px"
+        }
+        }
+    </script>
+    <!-- ==========================
+     Demo Payment Gateway (JavaScript Only)
+     ========================== -->
+    <script>
+    function goToPayment(productName, amount) {
+    localStorage.setItem("productName", productName);
+    localStorage.setItem("amount", amount);
+    window.location.href = "payment.html";
+    }
+    </script>
+    <script>
+function openLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+function closeLogin() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    alert("Login successful (demo only)");
+    closeLogin();
+}
+
+function openQuickView(imgSrc, name, price) {
+    document.getElementById("quickViewImg").src = imgSrc;
+    document.getElementById("quickViewName").innerText = name;
+    document.getElementById("quickViewPrice").innerText = price;
+    document.getElementById("quickViewModal").style.display = "flex";
+}
+
+function closeQuickView() {
+    document.getElementById("quickViewModal").style.display = "none";
+}
+
+// ✅ Combined modal closing handler
+window.onclick = function(event) {
+    const loginModal = document.getElementById("loginModal");
+    const quickModal = document.getElementById("quickViewModal");
+    if (event.target === loginModal) {
+        loginModal.style.display = "none";
+    }
+    if (event.target === quickModal) {
+        quickModal.style.display = "none";
+    }
+};
+</script>
+<script src="script.js"></script>
+
+    
+
+</body>
+</html>
